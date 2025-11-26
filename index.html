@@ -1058,19 +1058,25 @@ Upload de fotos, Criação ou revisão de títulos, Descrições otimizadas, Cat
   color: var(--accent-color) !important; /* verde do tema */
 }
 
-/* Ajuste para mobile */
+/* Ajuste do topo no mobile */
 @media (max-width: 768px) {
-  .top-bar {
-    display: flex;
-    flex-direction: column; /* Coloca um embaixo do outro */
-    align-items: flex-start;
-    gap: 6px; /* Espaço entre e-mail e WhatsApp */
+  .topbar .container {
+    flex-direction: column !important;
+    align-items: center !important;
+    gap: 6px;
   }
 
-  .top-bar a {
-    font-size: 14px;
+  .contact-info {
+    flex-direction: column !important;
+    align-items: center !important;
+    gap: 4px;
+  }
+
+  .contact-info i {
+    margin: 0 !important;
   }
 }
+
 </style>
 
 
