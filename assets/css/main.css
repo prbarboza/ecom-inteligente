@@ -1862,3 +1862,33 @@ section,
 .starter-section {
   /* Add your styles here */
 }
+
+.botao-orcamento {
+    /* Cor de Fundo (o verde-água) */
+    background-color: #58D68D; /* Este é um verde-água aproximado ao da imagem */
+    
+    /* Cor do Texto (branco) */
+    color: white; 
+    
+    /* Remove a borda padrão do navegador */
+    border: none;
+    
+    /* Deixa as bordas arredondadas (como na imagem) */
+    border-radius: 4px;
+    
+    /* Espaçamento interno (padding) para dar altura e largura ao botão */
+    padding: 12px 30px; 
+    
+    /* Fonte e tamanho do texto (ajuste conforme a fonte do seu site) */
+    font-size: 16px; 
+    font-weight: bold; /* Deixa o texto mais forte se necessário */
+    
+    /* Efeito ao passar o mouse (opcional, mas recomendado) */
+    cursor: pointer; 
+    transition: background-color 0.3s ease; /* Transição suave na cor */
+}
+
+/* Efeito ao passar o mouse por cima */
+.botao-orcamento:hover {
+    background-color: #46b777; /* Um tom um pouco mais escuro para o hover */
+}

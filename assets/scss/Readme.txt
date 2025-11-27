@@ -1,2 +1,2 @@
 The .scss (Sass) files are only available in the pro version.
-You can buy it from: https://bootstrapmade.com/reveal-bootstrap-corporate-template/
+You can buy it from: https://www.ecominteligente.com.br
