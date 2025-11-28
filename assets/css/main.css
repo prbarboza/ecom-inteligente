@@ -1892,3 +1892,12 @@ section,
 .botao-orcamento:hover {
     background-color: #46b777; /* Um tom um pouco mais escuro para o hover */
 }
+
+/* Estilo para o incentivo de Parcelamento */
+.small-incentive {
+    font-size: 1rem; /* Tamanho de fonte normal */
+    color: #58D68D; /* Cor verde-água para destaque */
+    font-weight: 500;
+    margin-top: -15px; /* Puxa um pouco para perto do preço */
+    margin-bottom: 25px; /* Adiciona espaço antes da lista de features */
+}
