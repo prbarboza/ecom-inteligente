@@ -1901,3 +1901,44 @@ section,
     margin-top: -15px; /* Puxa um pouco para perto do preço */
     margin-bottom: 25px; /* Adiciona espaço antes da lista de features */
 }
+
+/* Correção Final: Remove a linha lateral (verde ou azul) do cabeçalho/navbar */
+#header, 
+.header,
+.header.sticky-top,
+.topbar {
+    /* Anula qualquer borda ou linha nas laterais */
+    border-left: none !important;
+    border-right: none !important;
+    
+    /* Remove a sombra que pode estar simulando a linha azul */
+    box-shadow: none !important; 
+}
+
+/* Correção definitiva: Remove a linha lateral (azul) do cabeçalho */
+
+/* 1. Remove a borda do Cabeçalho e do Branding em todos os estados */
+#header, 
+.header,
+.header.sticky-top,
+.header .branding,
+.topbar {
+    border-left: none !important;
+    border-right: none !important;
+    box-shadow: none !important;
+}
+
+/* 2. Remove qualquer linha gerada por pseudo-elementos (::before, ::after) */
+/* Geralmente a fonte do problema em templates complexos */
+#header::before, 
+#header::after,
+.header::before,
+.header::after {
+    display: none !important;
+    border-left: none !important;
+    content: none !important;
+}
+
+.topbar-link:hover {
+  color: var(--accent-color) !important; /* verde do tema */
+}
