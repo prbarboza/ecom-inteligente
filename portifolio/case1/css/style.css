@@ -8769,7 +8769,14 @@ textarea.form-control {
     stroke-dasharray: 89, 200;
     stroke-dashoffset: -136px; } }
 
-
+    /* 1. MELHORIA DE CONTRASTE */
+/* Garante que todos os textos dentro da seção de desconto sejam brancos e visíveis */
+.ftco-discount h3, 
+.ftco-discount h2, 
+.ftco-discount p {
+    color: #FFFFFF !important; /* Força a cor branca */
+    opacity: 1 !important;      /* Garante opacidade total */
+}
 
 /* 2. RESPONSIVIDADE DE FONTES NO MOBILE */
 @media (max-width: 767px) {
