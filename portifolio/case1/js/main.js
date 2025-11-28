@@ -278,8 +278,9 @@
 
 
   $('#appointment_date').datepicker({
-	  'format': 'm/d/yyyy',
-	  'autoclose': true
+    'format': 'dd/mm/yyyy', // Padrão brasileiro
+    'autoclose': true,
+    'language': 'pt-BR' // <--- ESTE É O PARÂMETRO CHAVE
 	});
 
 	$('#appointment_time').timepicker();
