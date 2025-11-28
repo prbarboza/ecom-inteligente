@@ -8768,3 +8768,29 @@ textarea.form-control {
   100% {
     stroke-dasharray: 89, 200;
     stroke-dashoffset: -136px; } }
+
+    /* 1. MELHORIA DE CONTRASTE */
+/* Garante que todos os textos dentro da seção de desconto sejam brancos e visíveis */
+.ftco-discount h3, 
+.ftco-discount h2, 
+.ftco-discount p {
+    color: #FFFFFF !important; /* Força a cor branca */
+    opacity: 1 !important;      /* Garante opacidade total */
+}
+
+/* 2. RESPONSIVIDADE DE FONTES NO MOBILE */
+@media (max-width: 767px) {
+    /* Diminui o H2 na seção de desconto especificamente para celulares */
+    .ftco-discount h2 {
+        font-size: 1.8rem !important; /* Tamanho ajustado (você pode experimentar entre 1.6rem e 2.0rem) */
+        line-height: 1.2;
+    }
+    
+    /* Opcional: Ajusta o H3 e o Parágrafo para evitar que pareçam muito grandes */
+    .ftco-discount h3 {
+        font-size: 1rem !important;
+    }
+    .ftco-discount p {
+        font-size: 0.9rem !important;
+    }
+}
