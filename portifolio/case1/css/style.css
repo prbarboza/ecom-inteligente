@@ -8778,18 +8778,19 @@ textarea.form-control {
     opacity: 1 !important;      /* Garante opacidade total */
 }
 
+/* 2. RESPONSIVIDADE DE FONTES NO MOBILE */
 @media (max-width: 767px) {
-    /* 1. Alinha o Bloco de Desconto no Centro e Força 100% de Largura */
-    .ftco-discount .discount {
-        width: 100% !important;
-        max-width: none !important; /* Remove qualquer limitação de largura */
-        margin: 0 auto !important; /* Garante que o bloco esteja centralizado */
-        padding: 30px 20px !important; /* Adiciona padding interno para não colar nas bordas da tela */
+    /* Diminui o H2 na seção de desconto especificamente para celulares */
+    .ftco-discount h2 {
+        font-size: 1.8rem !important; /* Tamanho ajustado (você pode experimentar entre 1.6rem e 2.0rem) */
+        line-height: 1.2;
     }
-
-    /* 2. Garante que a linha também utilize o espaço completo sem alinhamento forçado */
-    .ftco-discount .row.justify-content-end,
-    .ftco-discount .row.justify-content-center {
-        justify-content: center !important; /* Garante centralização em telas pequenas */
+    
+    /* Opcional: Ajusta o H3 e o Parágrafo para evitar que pareçam muito grandes */
+    .ftco-discount h3 {
+        font-size: 1rem !important;
+    }
+    .ftco-discount p {
+        font-size: 0.9rem !important;
     }
 }
