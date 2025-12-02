@@ -851,59 +851,55 @@ Upload de fotos, Criação ou revisão de títulos, Descrições otimizadas, Cat
         text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
     }
 
-    /* 1. Define uma altura fixa para o carrossel inteiro (650px) para evitar desalinhamento nas seções seguintes */
-        #header-carousel {
-            height: 650px;
-            position: relative;
-        }
+    <style>
+    /* CORREÇÃO DE ALINHAMENTO MOBILE E IMAGENS ESCURAS */
 
-        /* 2. Garante que as imagens preencham e cubram toda a área do carrossel */
-        #header-carousel .carousel-item {
-            height: 100%;
+    /* 1. ANULAÇÃO FORÇADA DA PELÍCULA ESCURA */
+    /* Garante que o pseudo-elemento de sobreposição seja totalmente transparente */
+    .carousel-item::before {
+        background: transparent !important; 
+        opacity: 1 !important; /* Anula qualquer regra de opacidade que cause escurecimento */
+    }
+    
+    /* Garante que o contêiner de texto (caption) não tenha fundo escuro */
+    .carousel-caption {
+        background: transparent !important;
+    }
+    
+    /* 2. CORREÇÃO DE ALINHAMENTO/TAMANHO PARA MOBILE (smartphones) */
+    @media (max-width: 767.98px) {
+        
+        /* Reduz o tamanho das fontes principais para caber na tela sem desalinhamento */
+        .carousel-caption h1 {
+            font-size: 1.5rem !important; 
+            line-height: 1.2 !important;
         }
-
-        #header-carousel .carousel-item img {
-            height: 100%;
-            object-fit: cover; /* Garante que a imagem cubra o espaço sem distorcer */
+        .carousel-caption h5 {
+            font-size: 0.8rem !important;
         }
         
-        /* 3. **CORREÇÃO DA ESCURIDÃO (O Overlay)** */
-        /* Zera o fundo de qualquer sobreposição que o tema possa ter */
-        #header-carousel .carousel-item::before,
-        #header-carousel .carousel-caption {
-             background: none !important; /* Remove o fundo escuro/overlay de forma forçada */
+        /* Garante que o texto e botões estejam centralizados e com espaçamento adequado */
+        .carousel-caption .p-3 {
+            padding: 10px !important;
+            text-align: center !important; 
+            width: 100%; 
         }
-
-
-        /* 4. Estilos de texto (opcional, para maior nitidez em fundos claros) */
-        #header-carousel .carousel-caption h1,
-        #header-carousel .carousel-caption h5 {
-            text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.4);
+        
+        /* Centraliza o conteúdo dentro do carrossel (texto e botões) */
+        .carousel-caption {
+            display: flex !important;
+            flex-direction: column !important;
+            align-items: center !important;
+            justify-content: center !important;
         }
-
-        /* 5. **CORREÇÃO DE ALINHAMENTO/TAMANHO PARA MOBILE** */
-        @media (max-width: 767.98px) {
-            
-            /* Reduz o tamanho da fonte H1 e H5 para caber na tela do celular */
-            #header-carousel .carousel-caption h1 {
-                font-size: 1.8rem !important; 
-            }
-            #header-carousel .carousel-caption h5 {
-                font-size: 0.9rem !important;
-            }
-            
-            /* Garante que o texto e botões estejam sempre centralizados */
-            #header-carousel .carousel-caption .p-3 {
-                padding: 1rem !important;
-                text-align: center !important; 
-            }
-            
-            /* Ajusta a margem dos botões para mobile */
-            #header-carousel .carousel-caption .btn {
-                margin: 5px !important;
-                padding: 10px 20px !important;
-            }
+        
+        /* Ajusta o padding dos botões para mobile */
+        .carousel-caption .btn {
+            margin: 5px !important;
+            padding: 10px 20px !important;
         }
+    }
+</style>
 /* CÓDIGO ANTIGO REMOVIDO: #hero .info p { color: #000 !important; text-shadow: none !important; } */
 
 </style>
