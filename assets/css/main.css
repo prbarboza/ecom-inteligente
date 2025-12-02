@@ -1961,3 +1961,33 @@ section,
   z-index: 99999 !important;
   pointer-events: auto !important;
 }
+
+/* CORREÇÃO FORÇADA DE COR PARA OS ÍCONES DE LISTA */
+/* Aplica o azul (#06A3DA) de forma forçada ao ícone de check */
+
+.service-details ul li i.bi-check-circle,
+.service-details .bi-check-circle {
+    /* Usando o código HEX literal em vez da variável para evitar falhas na resolução */
+    color: #06A3DA !important; 
+    /* Garante que o ícone se mantenha visível */
+    display: inline-block !important; 
+    /* Força o peso correto para que o ícone apareça corretamente */
+    font-weight: 900 !important; 
+}
+
+/* CORREÇÃO FINAL PARA ARTIGOS DO BLOG */
+
+/* 1. CORREÇÃO DE ESPAÇAMENTO APÓS O TEXTO EM NEGRITO (STRONG) */
+/* Adiciona 5 pixels de espaço à direita do texto em negrito dentro da lista (ex: "Atendimento com IA:") */
+.service-details ul li strong {
+    padding-right: 5px !important; 
+    margin-right: 0 !important; 
+}
+
+/* 2. CORREÇÃO DEFINITIVA DE COR PARA OS ÍCONES DE LISTA */
+/* Força a cor azul (#06A3DA) diretamente no ícone com a máxima prioridade */
+.service-details ul li i.bi-check-circle,
+.service-details .bi-check-circle {
+    color: #06A3DA !important; /* Azul Ecom Inteligente */
+    font-weight: 900 !important; 
+}
