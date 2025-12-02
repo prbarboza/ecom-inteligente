@@ -1955,3 +1955,9 @@ section,
 #hero .info * {
   pointer-events: auto; /* reativa clique nos botões e links */
 }
+
+#hero-carousel .carousel-control-prev,
+#hero-carousel .carousel-control-next {
+  z-index: 99999 !important;
+  pointer-events: auto !important;
+}
