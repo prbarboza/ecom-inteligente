@@ -812,22 +812,7 @@ Upload de fotos, Criação ou revisão de títulos, Descrições otimizadas, Cat
         position: relative; /* Necessário para posicionamento absoluto dos filhos */
     }
 
-    /* Estilo para o Container de Texto (Overlay e Nitidez) */
-    #hero .info {
-        /* Garante que o container de texto ocupe toda a área do banner */
-        position: absolute; 
-        top: 0;
-        left: 0;
-        right: 0;
-        bottom: 0;
-        z-index: 10; /* Fica acima da imagem */
-        /* **CRUCIAL**: Aplica o fundo escuro semi-transparente para dar vivacidade ao texto branco */
-        background: rgba(9, 30, 62, .7); 
-        display: flex;
-        align-items: center;
-        justify-content: center;
-    }
-
+    
     /* Estilo para o Carrossel (Fundo) */
     #hero-carousel {
         position: absolute;
@@ -851,55 +836,7 @@ Upload de fotos, Criação ou revisão de títulos, Descrições otimizadas, Cat
         text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
     }
 
-    <style>
-    /* CORREÇÃO DE ALINHAMENTO MOBILE E IMAGENS ESCURAS */
-
-    /* 1. ANULAÇÃO FORÇADA DA PELÍCULA ESCURA */
-    /* Garante que o pseudo-elemento de sobreposição seja totalmente transparente */
-    .carousel-item::before {
-        background: transparent !important; 
-        opacity: 1 !important; /* Anula qualquer regra de opacidade que cause escurecimento */
-    }
     
-    /* Garante que o contêiner de texto (caption) não tenha fundo escuro */
-    .carousel-caption {
-        background: transparent !important;
-    }
-    
-    /* 2. CORREÇÃO DE ALINHAMENTO/TAMANHO PARA MOBILE (smartphones) */
-    @media (max-width: 767.98px) {
-        
-        /* Reduz o tamanho das fontes principais para caber na tela sem desalinhamento */
-        .carousel-caption h1 {
-            font-size: 1.5rem !important; 
-            line-height: 1.2 !important;
-        }
-        .carousel-caption h5 {
-            font-size: 0.8rem !important;
-        }
-        
-        /* Garante que o texto e botões estejam centralizados e com espaçamento adequado */
-        .carousel-caption .p-3 {
-            padding: 10px !important;
-            text-align: center !important; 
-            width: 100%; 
-        }
-        
-        /* Centraliza o conteúdo dentro do carrossel (texto e botões) */
-        .carousel-caption {
-            display: flex !important;
-            flex-direction: column !important;
-            align-items: center !important;
-            justify-content: center !important;
-        }
-        
-        /* Ajusta o padding dos botões para mobile */
-        .carousel-caption .btn {
-            margin: 5px !important;
-            padding: 10px 20px !important;
-        }
-    }
-</style>
 /* CÓDIGO ANTIGO REMOVIDO: #hero .info p { color: #000 !important; text-shadow: none !important; } */
 
 </style>
