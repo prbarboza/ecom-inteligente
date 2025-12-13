@@ -2963,17 +2963,24 @@ h2 {
 
 @media (max-width: 768px) {
 
-  .service-details-page .page-title h1 {
-    font-size: 26px;
+  /* Título da seção (h2) */
+  #blog .section-title h2 {
+    font-size: 28px;
   }
 
-  .service-details-page .service-details h3 {
-    font-size: 20px;
+  /* Subtítulo da seção (p) */
+  #blog .section-title p {
+    font-size: 14px;
   }
 
-  .service-details-page .service-details p,
-  .service-details-page .service-details li {
-    font-size: 15px;
+  /* Títulos das postagens (h5) */
+  #blog .card-body h5 {
+    font-size: 18px;
+  }
+
+  /* Texto da descrição das postagens (p) */
+  #blog .card-body p {
+    font-size: 13px;
   }
 }
 
