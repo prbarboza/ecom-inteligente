@@ -2961,4 +2961,19 @@ h2 {
   }
 }
 
+@media (max-width: 768px) {
+
+  .service-details-page .page-title h1 {
+    font-size: 26px;
+  }
+
+  .service-details-page .service-details h3 {
+    font-size: 20px;
+  }
+
+  .service-details-page .service-details p,
+  .service-details-page .service-details li {
+    font-size: 15px;
+  }
+}
 
