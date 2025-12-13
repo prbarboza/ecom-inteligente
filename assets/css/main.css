@@ -2939,4 +2939,26 @@ h2 {
   }
 }
 
+/* ===== AJUSTE DE TIPOGRAFIA DO FAQ ===== */
+
+/* Títulos das perguntas */
+#faq .faq-item h3 {
+  font-size: calc(1em - 1px);
+}
+
+/* Texto das respostas */
+#faq .faq-content p {
+  font-size: calc(1em - 1px);
+}
+
+@media (max-width: 768px) {
+  #faq .faq-item h3 {
+    font-size: calc(1em - 1px);
+  }
+
+  #faq .faq-content p {
+    font-size: calc(1em - 1px);
+  }
+}
+
 
