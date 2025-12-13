@@ -2842,7 +2842,7 @@ footer .col-footer {
   .section-header h2,
   .about .content h3,
   h2.section-title,
-  h2, h3{
+  h2,{
     font-size: 28px !important;
   }
 }
