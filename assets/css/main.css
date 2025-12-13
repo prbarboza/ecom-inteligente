@@ -2858,3 +2858,38 @@ html, body {
   max-width: 100%;
   overflow-x: hidden;
 }
+
+/* ================================
+   TÍTULOS – DESKTOP (padrão)
+================================ */
+h1,
+.page-title h1 {
+  font-size: 32px;
+}
+
+/* ================================
+   TÍTULOS – MOBILE
+================================ */
+@media (max-width: 768px) {
+  h1,
+  .page-title h1 {
+    font-size: 28px;
+  }
+}
+
+/* Desktop */
+.section-title h2,
+.section-header h2,
+h2 {
+  font-size: 32px;
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .section-title h2,
+  .section-header h2,
+  h2 {
+    font-size: 28px;
+  }
+}
+
