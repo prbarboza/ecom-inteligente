@@ -2896,5 +2896,47 @@ h2 {
   }
 }
 
+/* ===== AJUSTE DE TIPOGRAFIA DOS ARTIGOS ===== */
+
+/* Título principal da página */
+.service-details-page .page-title h1 {
+  font-size: 32px;
+  line-height: 1.2;
+}
+
+/* Subtítulo abaixo do H1 */
+.service-details-page .page-title p {
+  font-size: 16px;
+}
+
+/* Títulos das seções do artigo (h3) */
+.service-details-page .service-details h3 {
+  font-size: 22px;
+  line-height: 1.4;
+  margin-top: 30px;
+}
+
+/* Texto normal do artigo */
+.service-details-page .service-details p,
+.service-details-page .service-details li {
+  font-size: 16px;
+  line-height: 1.7;
+}
+
+@media (max-width: 768px) {
+
+  .service-details-page .page-title h1 {
+    font-size: 26px;
+  }
+
+  .service-details-page .service-details h3 {
+    font-size: 20px;
+  }
+
+  .service-details-page .service-details p,
+  .service-details-page .service-details li {
+    font-size: 15px;
+  }
+}
 
 
