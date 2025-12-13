@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <title>Configuração de Google Analytics 4 (GA4) e GTM - Ecom Inteligente</title>
+  <meta name="description" content="Configure corretamente suas ferramentas de dados: Google Analytics 4 (GA4), Tag Manager (GTM) e Search Console. Dados precisos para decisões inteligentes.">
+  <meta name="keywords" content="google analytics 4, ga4, google tag manager, gtm, google search console, rastreamento de conversão, dados de marketing, implementação de tags.">
+
+  <!-- Favicons -->
+  <link href="assets/img/favicon.png" rel="icon">
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com" rel="preconnect">
+  <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+
+  <!-- Main CSS File -->
+  <link href="assets/css/main.css" rel="stylesheet">
+
+  <!-- =======================================================
+  * Template Name: Ecom Inteligente
+  ======================================================== -->
+</head>
+
+<body class="service-details-page">
+
+  <header id="header" class="header sticky-top">
+
+<!-- Topbar -->
+    <div class="topbar d-flex align-items-center d-none d-md-flex">
+     <div class="container d-flex justify-content-center justify-content-md-between">
+        <div class="contact-info d-flex align-items-center">
+            <i class="bi bi-envelope d-flex align-items-center">
+                <a href="mailto:contato@ecominteligente.com.br" class="topbar-link">contato@ecominteligente.com.br</a>
+            </i>
+            <i class="bi bi-whatsapp d-flex align-items-center ms-4">
+                <a href="https://wa.me/5511922186313" target="_blank" class="topbar-link">(11) 98515-1976</a>
+            </i>
+        </div>
+        <div class="social-links d-none d-md-flex align-items-center">            
+            <a href="https://www.facebook.com/share/1AGi7VNBp1/"><i class="bi bi-facebook"></i></a>
+            <a href="https://www.instagram.com/ecom.inteligente"><i class="bi bi-instagram"></i></a>
+            <a href="https://www.linkedin.com/company/ecominteligente"><i class="bi bi-linkedin"></i></a>
+        </div>
+    </div>
+</div>
+<!-- /Topbar -->
+
+    <div class="branding d-flex align-items-cente">
+
+      <div class="container position-relative d-flex align-items-center justify-content-between">
+        <a href="index.html" class="logo d-flex align-items-center">
+          <!-- Uncomment the line below if you also wish to use an image logo -->
+          <img src="assets/img/logo.png" alt="Logo Ecom Inteligente" class="img-fluid">
+          </a>
+
+        <!-- Navigation -->
+        <nav id="navmenu" class="navmenu">
+          <ul>
+            <li><a href="index.html#hero" class=" active">Home</a></li>
+            <li><a href="index.html#sobre-nos">Sobre Nós</a></li>
+            <li><a href="index.html#servicos">Serviços</a>
+            <li><a href="index.html#precos">Planos</a></li>
+            <li><a href="index.html#blog">Blog</a></li>
+            <li><a href="index.html#portfolio">Portfólio</a></li>
+            <li><a href="index.html#depoimentos">Depoimentos</a></li>            
+            <li><a href="index.html#contato">Contato</a></li>
+          </ul>
+
+          <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+        </nav>
+
+      </div>
+
+    </div>
+
+  </header>
+
+  <main class="main">
+
+    <!-- Page Title -->
+    <div class="page-title" data-aos="fade">
+      <div class="heading">
+        <div class="container">
+          <div class="row d-flex justify-content-center text-center">
+            <div class="col-lg-8">
+              <h1 class="fs-3">Google Tools e Mensuração</h1>
+              <p class="mb-0">Domine o Google: Otimização e Análise Completa com as Ferramentas Essenciais.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <nav class="breadcrumbs">
+        <div class="container">
+          <ol>
+            <li><a href="index.html">Home</a></li>
+            <li class="current"></li>
+          </ol>
+        </div>
+      </nav>
+    </div><!-- End Page Title -->
+
+    <!-- Service Details Section -->
+    <section id="service-details" class="service-details section">
+
+      <div class="container">
+
+        <div class="row gy-4">
+
+          <div class="col-lg-4" data-aos="fade-up" data-aos-delay="100">
+            <div class="services-list">
+              <a href="service-e-commerce.html">E-commerce</a>
+              <a href="service-landing.html">Landing Page</a>
+              <a href="service-trafego-pago.html">Tráfego Pago</a>
+              <a href="service-dev.html">Desenvolvimento Web</a>
+              <a href="#" class="active">Google Tools</a>
+              <a href="service-seo.html">SEO - Search Engine Optimization</Search></Search></a>
+            </div>
+
+            <h4 class="fs-6">Conheça todos os nossos serviços.</h4>
+            <p></p>
+          </div>
+
+          <div class="col-lg-8" data-aos="fade-up" data-aos-delay="200">
+            <img src="assets/img/servicos/tools.jpg" alt="" class="img-fluid services-img">
+            <h4>Configuração, Gestão e Treinamento em Google Analytics, Tag Manager, Search Console e Google Meu Negócio para Resultados Sólidos.</h4>
+            <p>Você sabe exatamente de onde vêm seus clientes? E o que eles fazem no seu site? Trabalhar sem mensuração é como dirigir no escuro. Nós instalamos, configuramos e interpretamos as ferramentas mais poderosas do Google, transformando dados brutos em insights acionáveis para que você tome decisões estratégicas e aumente sua lucratividade.</p>
+
+            <p>
+              <h4>Análise e Rastreamento de Dados</h4>
+            </p>
+
+            <p>Foco em configurar a base de dados para que você possa medir tudo com precisão.</p>
+            <ul>
+              <li><i class="bi bi-check-circle"></i> <span>Google Analytics 4 (GA4) Avançado: Configuração completa do GA4, migração do Universal Analytics, criação de eventos e conversões personalizadas para rastrear o comportamento exato dos usuários no seu site ou e-commerce.</span></li>
+              <li><i class="bi bi-check-circle"></i> <span>Google Tag Manager (GTM) Profissional: Implementação do GTM para centralizar e gerenciar facilmente todos os códigos de rastreamento (Pixels de campanhas, Tags de remarketing e eventos), garantindo agilidade e precisão nos dados.</span></li>
+              <li><i class="bi bi-check-circle"></i> <span>Search Console (GSC) e SEO: Instalação e monitoramento do GSC para identificar erros de rastreamento, acompanhar o desempenho orgânico, a indexação do site e as consultas de busca que trazem tráfego.</span></li>
+            </ul>
+            <p>
+              <h4>Presença Local e Credibilidade</h4>
+            </p>
+
+            <p>Foco em usar o Google para construir a reputação e a visibilidade local da sua marca.</p>
+            <ul>
+              <li><i class="bi bi-check-circle"></i> <span>Google Meu Negócio (GMN) Otimizado: Criação ou otimização do perfil no GMN, com foco em fotos de qualidade, informações atualizadas, horário de funcionamento e técnicas para ranquear em buscas locais.</span></li>
+              <li><i class="bi bi-check-circle"></i> <span></span>Gestão de Avaliações e Reputação: Treinamento ou gestão da ferramenta de avaliações do GMN para responder a clientes, melhorar a nota e construir a confiança da marca perante o público local.</li>
+              <li><i class="bi bi-check-circle"></i> <span>Google Maps e Rotas: Garantia de que a sua empresa seja facilmente encontrada no Google Maps, integrando horários e informações essenciais, direcionando tráfego físico e digital.</span></li>
+            </ul>
+            <p>
+              <h4>Treinamento e Autonomia</h4>
+            </p>
+
+            <p>Foco em capacitar sua equipe para que ela possa usar os dados no dia a dia.</p>
+            <ul>
+              <li><i class="bi bi-check-circle"></i> <span>Dashboards de Desempenho Personalizados: Criação de relatórios visuais e intuitivos no Looker Studio (ou ferramentas similares) com os KPIs mais importantes para o seu negócio (CAC, ROAS, Taxa de Conversão).</span></li>
+              <li><i class="bi bi-check-circle"></i> <span>Treinamento de Equipe em GA4: Sessões de capacitação para que seu time entenda como navegar no Analytics, interpretar relatórios básicos e identificar as principais tendências de consumo.</span></li>
+              <li><i class="bi bi-check-circle"></i> <span>Monitoramento de Metas e Funis: Configuração de metas e funis de conversão no GA4 para que você saiba exatamente em qual etapa o cliente está abandonando a jornada de compra e onde focar seus esforços de otimização.</span></li>
+            </ul>
+            <p>
+              <h4 class="fs-6">TRANSFORME DADOS EM DECISÕES LUCRATIVAS. PARE DE CHUTAR, COMECE A MEDIR.</h4>
+            </p>
+
+            <p>Fale com nossos especialistas em Google Tools e tenha total controle sobre o desempenho do seu negócio digital.</p>
+               <a href="https://wa.me/5511922186313?text=Ol%C3%A1%2C%20gostaria%20de%20solicitar%20um%20or%C3%A7amento%20e%20falar%20com%20um%20especialista." 
+             target="_blank" 
+             class="botao-orcamento" 
+             style="text-decoration: none; display: inline-block;">
+             Solicitar Orçamento
+</a>
+            
+          </div>
+
+        </div>
+
+      </div>
+
+    </section><!-- /Service Details Section -->
+
+  </main>
+
+   <!-- FOOTER -->
+<footer class="footer-ecom">
+    <div class="container py-5">
+        <div class="row g-5">
+
+            <!-- COLUNA 1 -->
+            <div class="col-lg-3 col-md-6">
+                <h4 class="footer-title">Ecom Inteligente</h4>
+                <p class="footer-text">
+                    Estratégias inteligentes para e-commerce, automação e tráfego pago.
+                    Transformamos lojas virtuais em máquinas de vendas.
+                </p>
+                <div class="footer-social">
+                    <a class="footer-icon" href="https://www.facebook.com/share/1AGi7VNBp1/" target="_blank"><i class="bi bi-facebook"></i></a>
+                    <a class="footer-icon" href="https://www.instagram.com/ecom.inteligente" target="_blank"><i class="bi bi-instagram"></i></a>
+                    <a class="footer-icon" href="https://www.linkedin.com/company/ecominteligente" target="_blank"><i class="bi bi-linkedin"></i></a>
+                </div>
+            </div>
+
+            <!-- COLUNA 2 -->
+            <div class="col-lg-3 col-md-6">
+                <h4 class="footer-title">Serviços</h4>
+                <a class="footer-link" href="service-trafego-pago.html">Tráfego Pago</a>
+                <a class="footer-link" href="service-e-commerce.html">Criação de Loja Virtual</a>
+                <a class="footer-link" href="service-landing.html">Landing Pages</a>
+                <a class="footer-link" href="service-seo.html">SEO</a>
+            </div>
+
+            <!-- COLUNA 3 -->
+            <div class="col-lg-3 col-md-6">
+                <h4 class="footer-title">Contato</h4>
+                <p class="footer-info"><i class="bi bi-whatsapp me-2"></i> (11) 98515-1976</p>
+                <p class="footer-info"><i class="bi bi-envelope me-2"></i> contato@ecominteligente.com.br</p>
+                <p class="footer-info"><i class="bi bi-geo-alt me-2"></i> Osasco – SP</p>
+            </div>
+
+            <!-- COLUNA 4 -->
+            <div class="col-lg-3 col-md-6">
+                <h4 class="footer-title">Informações</h4>
+                <a class="footer-link" href="#sobre-nos">Quem Somos</a>
+                <a class="footer-link" href="#portfolio">Portfólio</a>
+                <a class="footer-link" href="politica-de-privacidade.html">Política de Privacidade</a>
+            </div>
+
+        </div>
+    </div>
+
+    <div class="footer-bottom">
+        © 2025 Ecom Inteligente — Todos os direitos reservados.
+    </div>
+</footer>
+
+  <!-- Scroll Top -->
+  <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Preloader -->
+  <div id="preloader"></div>
+
+  <!-- Vendor JS Files -->
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/php-email-form/validate.js"></script>
+  <script src="assets/vendor/aos/aos.js"></script>
+  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="assets/vendor/imagesloaded/imagesloaded.pkgd.min.js"></script>
+  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+
+  <!-- Main JS File -->
+  <script src="assets/js/main.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <title>E-commerce: Planos e Detalhes - Ecom Inteligente</title>
+  <meta name="description" content="Nossos planos de desenvolvimento de E-commerce: loja virtual completa, otimizada e pronta para vender.">
+  <meta name="keywords" content="criação de e-commerce, loja virtual, Planos, planos, plataforma vtex, nuvemshop">
+
+  <link href="assets/img/favicon.png" rel="icon">
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <link href="https://fonts.googleapis.com" rel="preconnect">
+  <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+
+  <link href="assets/css/main.css" rel="stylesheet">
+
+  <style>
+    .botao-orcamento {
+        background-color: #58D68D; /* Cor verde-água */
+        color: white;
+        border: none;
+        border-radius: 4px;
+        padding: 12px 30px;
+        font-size: 16px;
+        font-weight: bold;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+        text-decoration: none; 
+        display: inline-block; 
+        text-align: center;
+    }
+    .botao-orcamento:hover {
+        background-color: #46b777;
+    }
+
+    /* Estilo e Efeito Hover para o Card Principal */
+    .card {
+        transition: all 0.4s ease;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Sombra inicial sutil */
+    }
+    .card:hover {
+        transform: translateY(-8px); /* Efeito de elevação */
+        box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2); /* Sombra mais forte no hover */
+    }
+    
+    /* Estilo e Efeito Hover para os Cards de Informação */
+    .info-card {
+        text-align: center;
+        border: 1px solid #eee;
+        transition: all 0.4s ease;
+        margin-top: 15px; 
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Sombra inicial sutil */
+    }
+    .info-card:hover {
+        border-color: #58D68D;
+        transform: translateY(-8px); /* Efeito de elevação */
+        box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2); /* Sombra mais forte no hover */
+    }
+    
+    /* *** ALTERAÇÃO APLICADA AQUI ***
+       Aumentei a especificidade e adicionei !important para evitar que a cor branca 
+       definida em outro lugar sobrescreva o verde-água.
+    */
+    .info-card .info-icon { 
+        font-size: 40px;
+        color: #58D68D !important; /* Corrigido para garantir a cor verde-água */
+        margin-bottom: 15px;
+        display: block;
+    }
+    /* ***************************** */
+    
+    .pricing-details {
+        list-style: none;
+        padding: 0;
+    }
+    .pricing-details li {
+        margin-bottom: 10px;
+        padding-left: 1.3em;
+        position: relative;
+    }
+    .pricing-details li:before {
+        content: "\f26e"; /* Ícone de check do Bootstrap Icons (bi-check-circle) */
+        font-family: "bootstrap-icons";
+        color: #58D68D;
+        position: absolute;
+        left: 0;
+    }
+    
+    /* Estilo para a Lista Lateral de Serviços (Adicionado) */
+    .services-list a {
+      display: block;
+      padding: 10px 15px;
+      margin-bottom: 5px;
+      background: #f7f7f7; /* Fundo cinza claro */
+      color: #333;
+      border-radius: 4px;
+      transition: 0.3s;
+      text-decoration: none;
+      font-weight: 500;
+      border: 1px solid #e9e9e9;
+    }
+
+    .services-list a.active {
+      background: #58D68D; /* Cor principal (verde-água) */
+      color: #fff;
+      border-color: #58D68D;
+    }
+
+    .services-list a:hover {
+      background: #e9ecef;
+      color: #58D68D;
+    }
+
+    .services-list a.active:hover {
+      background: #46b777;
+    }
+
+    
+  </style>
+</head>
+
+<body class="starter-page-page">
+
+  <header id="header" class="header sticky-top">
+
+    <div class="topbar d-flex align-items-center d-none d-md-flex">
+     <div class="container d-flex justify-content-center justify-content-md-between">
+        <div class="contact-info d-flex align-items-center">
+            <i class="bi bi-envelope d-flex align-items-center">
+                <a href="mailto:contato@ecominteligente.com.br" class="topbar-link">contato@ecominteligente.com.br</a>
+            </i>
+            <i class="bi bi-whatsapp d-flex align-items-center ms-4">
+                <a href="https://wa.me/5511922186313" target="_blank" class="topbar-link">(11) 98515-1976</a>
+            </i>
+        </div>
+        <div class="social-links d-none d-md-flex align-items-center">            
+            <a href="https://www.facebook.com/share/1AGi7VNBp1/"><i class="bi bi-facebook"></i></a>
+            <a href="https://www.instagram.com/ecom.inteligente"><i class="bi bi-instagram"></i></a>
+            <a href="https://www.linkedin.com/company/ecominteligente"><i class="bi bi-linkedin"></i></a>
+        </div>
+    </div>
+</div>
+<div class="branding d-flex align-items-cente">
+
+      <div class="container position-relative d-flex align-items-center justify-content-between">
+        <a href="index.html" class="logo d-flex align-items-center">
+          <img src="assets/img/logo.png" alt="Logo Ecom Inteligente" class="img-fluid">
+        </a>
+
+        <nav id="navmenu" class="navmenu">
+          <ul>
+            <li><a href="index.html#hero" class=" active">Home</a></li>
+            <li><a href="index.html#sobre-nos">Sobre Nós</a></li>
+            <li><a href="index.html#servicos">Serviços</a>
+            <li><a href="index.html#precos">Planos</a></li>
+            <li><a href="index.html#blog">Blog</a></li>
+            <li><a href="index.html#portfolio">Portfólio</a></li>
+            <li><a href="index.html#depoimentos">Depoimentos</a></li>            
+            <li><a href="index.html#contato">Contato</a></li>
+          </ul>
+            <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+        </nav>
+
+      </div>
+
+    </div>
+
+  </header>
+
+  <main class="main">
+
+    <div class="page-title" data-aos="fade">
+      <div class="heading">
+        <div class="container">
+          <div class="row d-flex justify-content-center text-center">
+            <div class="col-lg-8">
+              <h1>E-commerce: Planos e Detalhes</h1>
+              <p class="mb-0">Desenvolvemos sua loja virtual nas plataformas mais robustas do mercado. Pronto para vender de verdade!</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <nav class="breadcrumbs">
+        <div class="container">
+          <ol>
+            <li><a href="index.html">Home</a></li>
+            <li class="current">E-commerce</li>
+          </ol>
+        </div>
+      </nav>
+    </div>
+    
+    <section id="ecom-details" class="starter-section section">
+
+      <div class="container section-title" data-aos="fade-up">
+        <h2>Seu E-commerce do Zero à Venda</h2>
+        <p>Conheça as etapas e os diferenciais dos nossos projetos de desenvolvimento de loja virtual.</p>
+      </div>
+
+      <div class="container" data-aos="fade-up">
+        
+        <div class="row gy-4"> 
+            
+            <div class="col-lg-4" data-aos="fade-up" data-aos-delay="100">
+                <div class="services-list">
+                    <a href="#" class="active">E-commerce</a>
+                    <a href="preco-landing-page.html">Landing Page</a>
+                    <a href="preco-trafego-pago.html">Tráfego Pago</a>
+                    
+                </div>
+                <p></p>
+            </div>
+
+            <div class="col-lg-8" data-aos="fade-up" data-aos-delay="200">
+                <div class="row">
+                    <div class="col-lg-9 col-md-12 mb-5 mx-auto">
+                        <div class="card p-4 border-0" style="border-top: 5px solid #58D68D;">
+                            <h3 class="card-title text-center" style="color: #58D68D;">Pacote E-commerce Premium</h3>
+                            <div class="text-center mb-4">
+                                <span class="display-4 fw-bold">R$ 1.199</span><span class="text-muted"> / a partir</span>
+                            </div>
+                            <p class="text-center small-incentive">Parcelamento em até <strong>3x sem juros</strong> no cartão!</p>
+                                 <ul class="pricing-details">
+
+                            <ul class="pricing-details">
+                                <li>Planejamento e Escopo Detalhado (MVP e roadmap)</li>
+                                <li>Desenvolvimento em Plataforma de Ponta (Tray, Nuvemshop, Loja Integrada, etc)</li>
+                                <li>Design 100% Personalizado (Layout da Plataforma)</li>
+                                <li>Integração com ERPs e Sistemas de Logística (Correios, transportadoras)</li>
+                                <li>Configuração de Meios de Pagamento (Gateway e Antifraude)</li>
+                                <li>Otimização Técnica para SEO e Velocidade (Mobile-First)</li>
+                                <li>Treinamento Completo para Gestão da Loja e Produtos</li>
+                                <li>Suporte Pós-Lançamento e Evolução Contínua</li>
+                            </ul>
+
+                            <p class="mt-4 text-center fw-bold">Solução ideal para empresas que buscam alta performance, escalabilidade e diferenciação no mercado.</p>
+
+                            <div class="text-center mt-3">
+                                <a href="https://wa.me/5511922186313?text=Ol%C3%A1%2C%20gostaria%20de%20solicitar%20um%20or%C3%A7amento%20para%20o%20Pacote%20E-commerce%20Premium." 
+                                    target="_blank" 
+                                    class="botao-orcamento w-100">
+                                    Falar com Especialista
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="col-12 mt-5">
+                        <h3 class="text-center mb-4">Plataformas e Serviços Especializados</h3>
+                        <div class="row">
+                            <div class="col-md-4 mb-4" data-aos="fade-up" data-aos-delay="100">
+                                <div class="info-card card p-4 h-100">
+                                    <i class="bi bi-arrows-expand info-icon"></i>
+                                    <h4 class="card-title">Foco em Migração</h4>
+                                    <p>Realizamos a migração segura da sua loja antiga para novas plataformas, preservando dados de clientes e histórico de SEO.</p>
+                                </div>
+                            </div>
+                            <div class="col-md-4 mb-4" data-aos="fade-up" data-aos-delay="200">
+                                <div class="info-card card p-4 h-100">
+                                    <i class="bi bi-shop info-icon"></i>
+                                    <h4 class="card-title">Integração Marketplace</h4>
+                                    <p>Integramos seu e-commerce com os principais Marketplaces (Mercado Livre, Amazon, Magalu) para gerenciar o estoque de forma centralizada.</p>
+                                </div>
+                            </div>
+                            <div class="col-md-4 mb-4" data-aos="fade-up" data-aos-delay="300">
+                                <div class="info-card card p-4 h-100">
+                                    <i class="bi bi-cart-x-fill info-icon"></i>
+                                    <h4 class="card-title">Consultoria de Checkout</h4>
+                                    <p>Análise e otimização do seu funil de checkout para reduzir o abandono de carrinho e aumentar a taxa de conversão em até 30%.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-12 text-center mt-5">
+                        <h4>O SEU NEGÓCIO MERECE UMA LOJA INTELIGENTE.</h4>
+                        <p>Construímos a plataforma que você precisa para crescer e dominar o mercado.</p>
+                        <a href="https://wa.me/5511922186313?text=Ol%C3%A1%2C%20gostaria%20de%20solicitar%20um%20or%C3%A7amento%20de%20Desenvolvimento%20E-commerce." 
+                            target="_blank" 
+                            class="botao-orcamento btn-lg">
+                            Solicitar Orçamento
+                        </a>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+
+      </div>
+
+    </section>
+
+  </main>
+
+   <div class="container-fluid bg-dark text-light mt-5 pt-5">
+    <div class="container">
+        <div class="row gx-5">
+
+            <div class="col-lg-4 col-md-12 mb-5">
+                <div class="footer-title pb-3 mb-4">
+                    <h3 class="footer-heading">Entre em Contato</h3>
+                </div>
+
+                <div class="d-flex mb-3">
+                    <i class="bi bi-geo-alt text-primary me-2"></i>
+                    <p class="mb-0">Osasco - São Paulo</p>
+                </div>
+
+                <div class="d-flex mb-3">
+                    <i class="bi bi-envelope-open text-primary me-2"></i>
+                    <p class="mb-0">contato@ecominteligente.com.br</p>
+                </div>
+
+                <div class="d-flex mb-3">
+                    <i class="bi bi-whatsapp text-success me-2"></i>
+                    <p class="mb-0">
+                        <a href="https://wa.me/5511922186313" target="_blank" class="text-light text-decoration-none">
+                            (11) 92218-6313
+                        </a>
+                    </p>
+                </div>
+
+                <div class="d-flex mt-4">
+                    <a class="btn btn-primary btn-square me-2" href="https://www.facebook.com/share/1AGi7VNBp1/">
+                        <i class="bi bi-facebook fw-normal"></i>
+                    </a>
+                    <a class="btn btn-primary btn-square me-2" href="https://instagram.com/ecom.inteligente">
+                        <i class="bi bi-instagram fw-normal"></i>
+                    </a>
+                    <a class="btn btn-primary btn-square me-2" href="https://linkedin.com/company/ecominteligente">
+                        <i class="bi bi-linkedin fw-normal"></i>
+                    </a>
+                </div>
+            </div>
+
+            <div class="col-lg-4 col-md-12 mb-5">
+                <div class="footer-title pb-3 mb-4">
+                    <h3 class="footer-heading">Links Rápidos</h3>
+                </div>
+
+                <div class="footer-links d-flex flex-column">
+                    <a class="text-light mb-2" href="index.html#hero">
+                        <i class="bi bi-arrow-right text-primary me-2"></i> Home
+                    </a>
+                    <a class="text-light mb-2" href="index.html#sobre-nos">
+                        <i class="bi bi-arrow-right text-primary me-2"></i> Sobre Nós
+                    </a>
+                    <a class="text-light mb-2" href="index.html#servicos">
+                        <i class="bi bi-arrow-right text-primary me-2"></i> Serviços
+                    </a>
+                    <a class="text-light" href="index.html#contato">
+                        <i class="bi bi-arrow-right text-primary me-2"></i> Contato
+                    </a>
+                </div>
+            </div>
+
+            <div class="col-lg-4 col-md-12 mb-5">
+                <div class="footer-title pb-3 mb-4">
+                    <h3 class="footer-heading">Informações</h3>
+                </div>
+
+                <div class="footer-links d-flex flex-column">
+                    <a class="text-light mb-2" href="index.html#precos">
+                        <i class="bi bi-arrow-right text-primary me-2"></i> Planos
+                    </a>
+                    <a class="text-light mb-2" href="index.html#depoimentos">
+                        <i class="bi bi-arrow-right text-primary me-2"></i> Depoimentos
+                    </a>
+                    <a class="text-light mb-2" href="index.html#blog">
+                        <i class="bi bi-arrow-right text-primary me-2"></i> Blog
+                    </a>
+                    <a class="text-light" href="index.html#portfolio">
+                        <i class="bi bi-arrow-right text-primary me-2"></i> Portfólio
+                    </a>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+<div class="container-fluid text-white" style="background: #061429;">
+    <div class="container text-center">
+        <div class="row">
+            <div class="col-12">
+                <div class="d-flex align-items-center justify-content-center" style="height: 75px;">
+                    <p class="mb-0">
+                        &copy; <a class="text-white border-bottom" href="index.html">Ecom Inteligente</a>. 
+                        Todos os direitos reservados.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+  <div id="preloader"></div>
+
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/php-email-form/validate.js"></script>
+  <script src="assets/vendor/aos/aos.js"></script>
+  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="assets/vendor/imagesloaded/imagesloaded.pkgd.min.js"></script>
+  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+
+  <script src="assets/js/main.js"></script>
+
+</body>
+
+</html>
