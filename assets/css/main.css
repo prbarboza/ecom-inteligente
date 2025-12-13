@@ -346,19 +346,28 @@ h6 {
   }
 
   .navmenu ul {
-    display: none;
-    list-style: none;
-    position: absolute;
-    inset: 60px 20px 20px 20px;
-    padding: 10px 0;
-    margin: 0;
-    border-radius: 6px;
-    background-color: var(--nav-mobile-background-color);
-    overflow-y: auto;
-    transition: 0.3s;
-    z-index: 9998;
-    box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.1);
-  }
+  display: none;
+  list-style: none;
+  position: absolute;
+
+  /* 🔥 CORREÇÃO DO OVERFLOW */
+  top: 60px;
+  left: 0;
+  right: 0;
+  width: 100%;
+  max-width: 100%;
+
+  padding: 10px 0;
+  margin: 0;
+  border-radius: 6px;
+  background-color: var(--nav-mobile-background-color);
+  overflow-y: auto;
+  transition: 0.3s;
+  z-index: 9998;
+  box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.1);
+  box-sizing: border-box;
+}
+
 
   .navmenu a,
   .navmenu a:focus {
@@ -2833,7 +2842,7 @@ footer .col-footer {
   .section-header h2,
   .about .content h3,
   h2.section-title,
-  h2, {
+  h2, h3{
     font-size: 28px !important;
   }
 }
@@ -2845,3 +2854,7 @@ footer .col-footer {
   color: #ffffff !important;
 }
 
+html, body {
+  max-width: 100%;
+  overflow-x: hidden;
+}
