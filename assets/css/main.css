@@ -2839,12 +2839,15 @@ footer .col-footer {
 
 /* ======== Ajuste dos títulos para MOBILE ======== */
 @media (max-width: 768px) {
+
   .section-header h2,
   .about .content h3,
   h2.section-title,
-  h2,{
+  h2 {
     font-size: 28px !important;
+    line-height: 1.3;
   }
+
 }
 
 /* Ícones dentro das bolinhas da seção de planos */
@@ -2892,4 +2895,6 @@ h2 {
     font-size: 28px;
   }
 }
+
+
 
