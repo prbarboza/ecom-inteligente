@@ -2984,3 +2984,10 @@ h2 {
   }
 }
 
+/* Remove completamente a seção do carrossel de marcas */
+#clients,
+.clients,
+.logos,
+.partners {
+  display: none !important;
+}
